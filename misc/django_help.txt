@@ -1,5 +1,7 @@
 ##Django
 
+django-admin startproject travel-tracker-web
+
 python manage.py runserver
 python manage.py migrate # init/update database (sql)
 python manage.py createsuperuser

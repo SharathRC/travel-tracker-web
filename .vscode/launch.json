@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python",
+            "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/djecommerce/manage.py",
+            "program": "${workspaceFolder}/travel-tracker-web/manage.py",
             "args": [
                 "runserver"
             ],
