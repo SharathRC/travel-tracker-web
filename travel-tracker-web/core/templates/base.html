@@ -1,4 +1,4 @@
-{% load menu %}
+{% comment %} {% load menu %} {% endcomment %}
 
 <!doctype html>
 <html>
@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    <nav class="max-w-4xl mx-auto py-4 px-6 flex items-center justify-between bg-teal-600">
+    {% comment %} <nav class="max-w-4xl mx-auto py-4 px-6 flex items-center justify-between bg-teal-600">
         <div class="logo">
             <a href="/" class="text-white">RICE</a>
         </div>
@@ -48,7 +48,7 @@
                 {% endif %}
             {% endif %}
         </div>
-    </nav>
+    </nav> {% endcomment %}
 
     <div class="max-w-4xl mx-auto py-4 px-6">
         {% block content %}
