@@ -14,9 +14,9 @@
 
 </head>
 <body>
-    {% comment %} <nav class="max-w-4xl mx-auto py-4 px-6 flex items-center justify-between bg-teal-600">
+    <nav class="max-w-4xl mx-auto py-4 px-6 flex items-center justify-between" style="background-color:#BD81BF;">
         <div class="logo">
-            <a href="/" class="text-white">RICE</a>
+            <a href="/" class="text-white">Penguin</a>
         </div>
 
         <div class="search">
@@ -30,7 +30,7 @@
             </form>
         </div>
 
-        <div class="menu flex items-center space-x-4">
+        {% comment %} <div class="menu flex items-center space-x-4">
             {% menu %}
 
             <a href="{% url "cart_view" %}" class="flex py-2 px-4 bg-teal-800 text-white rounded-xl hover:bg-teal-900">
@@ -47,8 +47,8 @@
                     <a href="{% url 'my_store' %}" class="py-2 px-4 bg-teal-800 text-white rounded-xl hover:bg-teal-900">My store</a>
                 {% endif %}
             {% endif %}
-        </div>
-    </nav> {% endcomment %}
+        </div> {% endcomment %}
+    </nav>
 
     <div class="max-w-4xl mx-auto py-4 px-6">
         {% block content %}
