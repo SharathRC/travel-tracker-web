@@ -30,6 +30,16 @@
             </form>
         </div>
 
+        {% if request.user.is_authenticated %}
+            <div class="logout">
+                <a href="{% url "logout" %}" class="text-white">Logout</a>
+            </div>
+        {% else %}
+            <div class="login">
+                <a href="{% url "login" %}" class="text-white">Login</a>
+            </div>
+        {% endif %}
+
         {% comment %} <div class="menu flex items-center space-x-4">
             {% menu %}
 
