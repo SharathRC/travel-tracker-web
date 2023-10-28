@@ -34,6 +34,10 @@ class Trip(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    start_date = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField()
+
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default=ACTIVE)
 
     class Meta:
@@ -63,7 +67,7 @@ class Trip(models.Model):
         thumb_io = BytesIO()
         img.save(thumb_io, "JPEG", quality=80)
 
-        name = image.name.replace("uploads/product_images/", "")
+        name = image.name.replace("uploads/trip_cover_images/", "")
         thumbnail = File(thumb_io, name=name)
 
         return thumbnail
