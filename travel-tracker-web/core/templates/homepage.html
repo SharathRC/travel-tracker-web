@@ -5,9 +5,9 @@ Penguin: The travel essential
 {% endblock title %}
 
 {% block content %}
-    Penguin
-    <br></br>
-    The most essential!!
+    <a href="{% url "add_trip" %}" class="text-black">Add trip</a>
     {% include 'partials/trips.html' %}
+
+
 
 {% endblock content %}

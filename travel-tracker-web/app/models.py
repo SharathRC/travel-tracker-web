@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.files import File
 
+from datetime import datetime
+
 from io import BytesIO
 from PIL import Image
 
@@ -35,8 +37,8 @@ class Trip(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    start_date = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField()
+    start_date = models.DateTimeField(default=datetime.now, blank=True)
+    end_date = models.DateTimeField(default=datetime.now, blank=True)
 
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default=ACTIVE)
 
