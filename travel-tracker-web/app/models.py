@@ -69,7 +69,7 @@ class Trip(models.Model):
         thumb_io = BytesIO()
         img.save(thumb_io, "JPEG", quality=80)
 
-        name = image.name.replace("uploads/trip_cover_images/", "")
+        name = image.name.replace("uploads/trip_images/", "")
         thumbnail = File(thumb_io, name=name)
 
         return thumbnail
