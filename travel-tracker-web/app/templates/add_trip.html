@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Trip{% endblock title %}
+
+{% block content %}
+
+
+<form class="my-10" method="post" action=".">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button class="my-10 py-3 px-5 bg-teal-800 text-white">Add trip</button>
+</form>
+
+{% endblock content %}
