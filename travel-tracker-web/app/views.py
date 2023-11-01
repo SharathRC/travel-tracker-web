@@ -33,4 +33,9 @@ def add_new_trip(request):
     else:
         form = TripForm()
 
-    return render(request, "add_trip.html", {"form": form})
+    context = {
+        "title": "Add Trip",
+        "form": form,
+    }
+
+    return render(request, "add_trip.html", context)

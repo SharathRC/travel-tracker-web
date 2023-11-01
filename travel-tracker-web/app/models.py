@@ -38,10 +38,13 @@ class Trip(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     start_trip = models.DateTimeField(
-        verbose_name="Start Trip", default=datetime.now, blank=True
+        verbose_name="Start Trip",
+        blank=True,
     )
     end_trip = models.DateTimeField(
-        verbose_name="End Trip", default=datetime.now, blank=True
+        verbose_name="End Trip",
+        blank=True,
+        null=True,
     )
 
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default=ACTIVE)

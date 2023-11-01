@@ -1,9 +1,4 @@
 from django import forms
-from django.contrib.admin.widgets import (
-    AdminDateWidget,
-    AdminTimeWidget,
-    AdminSplitDateTime,
-)
 from .models import Trip
 
 
@@ -18,9 +13,15 @@ class TripForm(forms.ModelForm):
                 }
             ),
             "start_trip": forms.SelectDateWidget(
+                attrs={
+                    "class": "mx-4 px-3 py-2 my-2 border border-gray-200",
+                },
                 empty_label=("Choose Year", "Choose Month", "Choose Day"),
             ),
             "end_trip": forms.SelectDateWidget(
+                attrs={
+                    "class": "mx-4 px-3 py-2 my-2 border border-gray-200",
+                },
                 empty_label=("Choose Year", "Choose Month", "Choose Day"),
             ),
             "cover_image": forms.FileInput(
