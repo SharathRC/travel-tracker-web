@@ -1,7 +1,7 @@
 <div class="flex flex-wrap py-5">
     {% for trip in trips %}
         <div class="trip w-1/3 p-2">
-            <div class="p-4 bg-gray-100">
+            <div class="p-4 bg-gray-100" style="background-color:#57122E;">
                 <a href="{% url 'trip_detail' trip.slug %}">
                     {% if trip.cover_image %}
                         <div class="image mb-2">
