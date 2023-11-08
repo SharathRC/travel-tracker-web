@@ -5,7 +5,9 @@ Penguin: The travel essential
 {% endblock title %}
 
 {% block content %}
-    <a href="{% url "add_trip" %}" class="text-black">Add trip</a>
+    <div class="mx-auto">
+        <a href="{% url "add_trip" %}" class="dot objcenter flex items-center text-white">Add Trip</a>
+    </div>
 
     {% include 'partials/trips.html' %}
 
